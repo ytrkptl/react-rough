@@ -23,15 +23,13 @@
 ```js
 import ReactRough from 'react-rough';
 
-const options = {
-	points: [10, 10, 200, 200], // x, y, width, height
-	fill: 'red',
-	fillWeight: 3
-};
-
 render(
 	<ReactRough width={220} height={220}>
-		<Rectangle options={options} />
+		<ReactRough.Rectangle
+			points={[10, 10, 200, 200]}
+			fill="red"
+			fillWeight={3}
+		/>
 	</ReactRough>
 );
 ```
@@ -43,12 +41,12 @@ When you grab a shape from ReactRough, it renders each shape to a canvas element
 ### Render multiple shapes on one canvas element
 
 ```js
-import { ReactRough, Rectangle, Circle } from 'react-rough';
+import { ReactRough } from 'react-rough';
 
 render(
 	<ReactRough width={200} height={400}>
-		<Circle points={[50, 50, 80]} fill="red" />
-		<Polygon
+		<ReactRough.Circle points={[50, 50, 80]} fill="red" />
+		<ReactRough.Polygon
 			points={[[[690, 130], [790, 140], [750, 240], [690, 220]]]}
 			fill="blue"
 			stroke="green"
